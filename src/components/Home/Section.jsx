@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Bg from "../../assets/bg.svg";
 import { Link } from "react-router-dom";
 import User from "../Forms/User";
+import { FormContext } from "../../context/FormState";
 
 const Section = () => {
+  const { showForm } = useContext(FormContext);
   return (
     <section className="flex justify-center items-center flex-col sm:flex-row p-8 flex-wrap md:flex-nowrap border-b border-black mt-12 sm:mt-16 relative z-10">
       <article className="p-6">
@@ -24,7 +26,7 @@ const Section = () => {
         </main>
       </article>
       <img className="h-96 sm:h-[30rem]" src={Bg} alt="can't load" />
-      <User/>
+      {showForm !== "" && <User />}
     </section>
   );
 };

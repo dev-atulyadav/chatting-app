@@ -7,8 +7,7 @@ const User = () => {
   const { showForm } = useContext(FormContext);
 
   return (
-    <article className="absolute h-full w-full flex justify-center items-center bg-[#00000025]">
-      <Login/>
+    <article className="absolute h-full w-full p-4 flex justify-center items-center bg-[#00000049] backdrop-blur-[2px]">
       {(showForm === "Login" && <Login />) ||
         (showForm === "Sign Up" && <Signup />)}
     </article>
