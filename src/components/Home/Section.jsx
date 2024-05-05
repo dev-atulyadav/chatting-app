@@ -1,10 +1,11 @@
 import React from "react";
 import Bg from "../../assets/bg.svg";
 import { Link } from "react-router-dom";
+import User from "../Forms/User";
 
 const Section = () => {
   return (
-    <section className="flex justify-center items-center flex-col sm:flex-row p-8 flex-wrap md:flex-nowrap border-b border-black mt-12 sm:mt-20">
+    <section className="flex justify-center items-center flex-col sm:flex-row p-8 flex-wrap md:flex-nowrap border-b border-black mt-12 sm:mt-16 relative z-10">
       <article className="p-6">
         <main className="flex flex-col justify-center items-start">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
@@ -23,6 +24,7 @@ const Section = () => {
         </main>
       </article>
       <img className="h-96 sm:h-[30rem]" src={Bg} alt="can't load" />
+      <User/>
     </section>
   );
 };
