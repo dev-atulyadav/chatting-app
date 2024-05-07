@@ -29,7 +29,7 @@ const Nav = () => {
             </Link>
           ))}
         </div>
-        <div className="flex justify-center items-center gap-4 uppercase font-semibold text-xl sm:text-sm">
+        <div className="hidden sm:flex justify-center items-center gap-4 uppercase font-semibold text-xl sm:text-sm">
           <Link
             onClick={handleForms}
             className="p-2 hover:bg-green-500 rounded-lg hover:text-white border border-green-500 text-green-500"
