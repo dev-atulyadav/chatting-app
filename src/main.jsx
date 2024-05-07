@@ -8,10 +8,10 @@ import FormState from "./context/FormState";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <FormState>
       <NavState>
+    <FormState>
         <RouterProvider router={router} />
-      </NavState>
     </FormState>
+      </NavState>
   </React.StrictMode>
 );

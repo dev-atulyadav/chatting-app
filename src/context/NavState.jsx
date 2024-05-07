@@ -20,8 +20,15 @@ const NavState = ({ children }) => {
       path: "/more",
     },
   ]);
+  const [showNav, setShowNav] = useState(false);
+  const handleNav = (e) => {
+    if(e!="")
+    setShowNav(!showNav);
+  };
   return (
-    <NavContext.Provider value={{ navLinks }}>{children}</NavContext.Provider>
+    <NavContext.Provider value={{ navLinks, showNav, handleNav }}>
+      {children}
+    </NavContext.Provider>
   );
 };
 
